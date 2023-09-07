@@ -5,9 +5,7 @@ import Card from "@/app/components/card";
 import Image from "next/image";
 import IconLink from "@/assets/images/icons/link.svg";
 import IconBoard from "@/assets/images/icons/board.svg";
-import IconSensor from "@/assets/images/icons/sensor.svg";
 import Button from "../button";
-import { count } from "console";
 
 type Props = {
   title: string;
@@ -73,34 +71,18 @@ export default function DashboardThai({ title }: Props) {
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="flex items-start pt-4 pl-6 pb-4 pr-4 card-status rounded-xl justify-between">
-              <div className="flex flex-col gap-2 items-start w-[148px]">
-                <div className="bg-red-500 p-1 justify-center items-center rounded-lg">
-                  <Image src={IconBoard} width={36} height={36} alt=""></Image>
-                </div>
-                <div>
-                  <p className="font-normal text-sm text-gray">บอร์ดออฟไลน์</p>
-                  <h2>{board.countOffline}</h2>
-                </div>
-              </div>
-              <div>
-                <Image src={IconLink} width={24} height={24} alt=""></Image>
-              </div>
-            </div>
-            <div className="flex items-start pt-4 pl-6 pb-4 pr-4 card-status rounded-xl justify-between">
-              <div className="flex flex-col gap-2 items-start w-[148px]">
-                <div className="bg-green-500 p-1 justify-center items-center rounded-lg">
-                  <Image src={IconBoard} width={36} height={36} alt=""></Image>
-                </div>
-                <div>
-                  <p className="font-normal text-sm text-gray">บอร์ดออนไลน์</p>
-                  <h2>{board.countOnline}</h2>
-                </div>
-              </div>
-              <div>
-                <Image src={IconLink} width={24} height={24} alt=""></Image>
-              </div>
-            </div>
+            <Card
+              id="board-offline"
+              name="บอร์ดออนไลน์"
+              status={true}
+              count="216"
+            />
+            <Card
+              id="board-offline"
+              name="บอร์ดออฟไลน์"
+              status={false}
+              count="34,704"
+            />
           </div>
         </div>
         <div className="">
@@ -132,13 +114,13 @@ export default function DashboardThai({ title }: Props) {
           <div className="flex items-start gap-4">
             <Card
               id="sensor-offline"
-              name="บอร์ดออฟไลน์"
+              name="เซนเซอร์ออฟไลน์"
               status={false}
               count="1,080"
             />
             <Card
               id="sensor-online"
-              name="บอร์ดออนไลน์"
+              name="เซนเซอร์ออนไลน์"
               status={true}
               count="610,920"
             />
