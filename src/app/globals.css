@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--surface-colour-neutral-surface, #101828);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: #074E9F;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: var(--surface-colour-neutral-surface, #101828);
+}
+
+.content {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+}
+
+.line-footer {
+  background: #98A2B3;
+  height: 1px;
+  width: 100%;
+}
+
+.underline {
+  background: #98A2B3;
+}
+
+.text-gray {
+  color: rgba(208, 213, 221, 1);
+}
+
+.bg-primary {
+  background: #074E9F;
+}
+
+.bg-warning {
+  background: var(--warning-colour-warning-500, #F8BD26);
+}
+
+.bg-success {
+
+  background: var(--success-spare-colour-success-s-500, #00B2AA);
+}
+
+h2 {
+  color: var(--descriptive-text-colour-text-normal-700, #F9FAFB);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.card-status {
+  background: var(--surface-colour-white-surface, #1D2939);
+}
